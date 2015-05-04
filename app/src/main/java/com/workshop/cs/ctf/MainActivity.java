@@ -10,10 +10,14 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+    TextView textView; // The counter object
+    int valueOfCounter; //The value of the counter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textView = (TextView) findViewById(R.id.counter);
+        valueOfCounter = 0;
     }
 
     @Override
@@ -38,17 +42,17 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Increments the counter by 1 when UP button is pressed
     public void incrementCounter(View v) {
-        TextView textView = (TextView) v.findViewById(R.id.counter);
-        int valueOfCounter = Integer.parseInt(textView.getEditableText().toString());
-        valueOfCounter++;
-        textView.setText(Integer.toString(valueOfCounter));
+        valueOfCounter = Integer.parseInt(textView.getText().toString()); //Gets the value of the counter
+        valueOfCounter++; //Increment
+        textView.setText(Integer.toString(valueOfCounter)); //Sets the new value
     }
 
+    //Decrements the counter by 1 when DOWN button is pressed
     public void decrementCounter(View v) {
-        TextView textView = (TextView) v.findViewById(R.id.counter);
-        int valueofCounter = Integer.parseInt(textView.getEditableText().toString());
-        valueofCounter--;
-        textView.setText(Integer.toString(valueofCounter));
+        valueOfCounter = Integer.parseInt(textView.getText().toString()); //Gets the value of the counter
+        valueOfCounter--; //Decrement
+        textView.setText(Integer.toString(valueOfCounter)); //Sets the new value
     }
 }
