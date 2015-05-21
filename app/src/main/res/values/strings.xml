@@ -1,10 +1,14 @@
 <resources>
     <string name="app_name">CTF</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="default_value">0</string>
     <string name="add">ADD</string>
     <string name="subtract">SUBTRACT</string>
     <string name="app_title">CTF Task - 1</string>
+    <string name="app_title_new">CTF Task - 2</string>
+    <string name="title_activity_home">Home</string>
+    <string name="icon">icon</string>
+    <string name="page_title">ListView Demo</string>
+    <string name="title_activity_parent">ParentActivity</string>
 </resources>
